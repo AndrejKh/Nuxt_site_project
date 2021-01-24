@@ -2,7 +2,7 @@ import tailwindTypography from '@tailwindcss/typography'
 
 export default {
   // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
+  target: 'server',
   generate: {
     async routes () {
       const { $content } = require('@nuxt/content')
