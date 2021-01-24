@@ -9,7 +9,7 @@ Welcome to my first blog post using content module
 <info-box>
   <template #info-box>
     This is a vue component inside markdown using slots. Does this *work*?
-
+	Test
   </template>
 </info-box>
 
