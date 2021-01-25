@@ -1,5 +1,5 @@
 # site-nuxt
-
+This is the repository for @GrahamSH-LLK's new Nuxt & Tailwind site. It's a WIP, and it will change regularly. You can check the site out at https://staging.grahamsh.com.
 ## Build Setup
 
 ```bash
@@ -17,4 +17,3 @@ $ npm run start
 $ npm run generate
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
