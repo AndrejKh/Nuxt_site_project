@@ -2,6 +2,11 @@
 title: My first Blog Post
 description: Learning how to use @nuxt/content to create a blog
 alt: my first blog post
+author:
+  name: GrahamSH
+  bio: All about GrahamSH
+  image: https://images.unsplash.com/
+
 ---
 # My first blog post
 

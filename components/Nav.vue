@@ -9,18 +9,17 @@
         </div>
         <div class="flex w-full content-center justify-between md:w-1/2 md:justify-end">
             <ul class="list-reset flex justify-between flex-1 md:flex-none items-center">
-                <li class="mr-3">
-                    <NuxtLink class="inline-block font-normal py-2 px-4 text-gray-600 no-underline hover:text-gray-200 hover:text-underline" to="/">Home</NuxtLink>
-                </li>
-                <li class="mr-3">
-                    <NuxtLink class="inline-block font-normal py-2 px-4 text-gray-600 no-underline hover:text-gray-200 hover:text-underline" to="/blog">Blog</NuxtLink>
-                </li>
-                 <li class="mr-3">
-                    <NuxtLink class="inline-block font-normal py-2 px-4 text-gray-600 no-underline hover:text-gray-200 hover:text-underline" to="/about">About</NuxtLink>
-                </li>
+                <NavLink to="/" >Home</NavLink>
+                <NavLink to="/blog" >Blog</NavLink>
+                <NavLink to="/about" >About</NavLink>
 
             </ul>
         </div>
     </div>
 </nav>
 </template>
+<style class="postcss">
+.active {
+    @apply text-gray-200 !important;
+}
+</style>

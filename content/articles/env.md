@@ -1,9 +1,13 @@
 ---
 layout: post
-author: GrahamSH
+author:
+  name: GrahamSH
+  bio: All about GrahamSH
+  image: https://images.unsplash.com/
 title: Env
 categories: nodejs test
 date: 2021-01-13T22:11:12.333Z
+img: '/logo.svg'
 ---
 
 The other day, I decided to make a setup script for wasteof.money. If you don't know what wasteof.money is, check it out at dev.wasteof.money!
