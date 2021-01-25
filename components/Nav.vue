@@ -15,7 +15,10 @@
                 <li class="mr-3">
                     <NuxtLink class="inline-block font-normal py-2 px-4 text-gray-600 no-underline hover:text-gray-200 hover:text-underline" to="/blog">Blog</NuxtLink>
                 </li>
- 
+                 <li class="mr-3">
+                    <NuxtLink class="inline-block font-normal py-2 px-4 text-gray-600 no-underline hover:text-gray-200 hover:text-underline" to="/about">About</NuxtLink>
+                </li>
+
             </ul>
         </div>
     </div>
