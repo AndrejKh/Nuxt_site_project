@@ -1,5 +1,5 @@
 <template>
-  <main class="container mx-auto px-4 mt-28 md:mt-16 ">
+  <main class="container mx-auto px-4 mt-28 md:mt-16 h-screen">
     <article class="prose">
       <h1>{{ article.title }}</h1>
       <p>{{ article.description }}</p>
