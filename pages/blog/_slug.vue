@@ -40,6 +40,12 @@ a:hover .icon.icon-link {
 </style>
 <script>
 export default {
+  head() {
+    return {
+      title: `${this.article.title} - Blog - GrahamSH`
+    };
+  },
+
   methods: {
     formatDate(date) {
       const options = { year: "numeric", month: "long", day: "numeric" };
