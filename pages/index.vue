@@ -3,12 +3,11 @@
     <div class="hero py-16">
       <!-- container -->
       <div class="container px-4 sm:px-8 lg:px-16 xl:px-20 mx-auto">
-        <!-- hero wrapper -->
         <div
-          class="hero-wrapper grid grid-cols-1 md:grid-cols-12 gap-8 items-center"
+          class=" grid grid-cols-1 md:grid-cols-12 gap-8 items-center"
         >
           <!-- hero text -->
-          <div class="hero-text col-span-6">
+          <div class=" col-span-6">
             <h1
               class=" font-bold text-4xl md:text-5xl max-w-xl text-gray-900 leading-tight"
             >
@@ -23,7 +22,7 @@
           </div>
 
           <!-- hero image -->
-          <div class="hero-image col-span-6">
+          <div class="col-span-6">
             <img src="/logo.svg" height="300px" width="300px" />
           </div>
         </div>
