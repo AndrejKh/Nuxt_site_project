@@ -45,6 +45,7 @@
           <button
             class="shadow bg-indigo-500 hover:bg-teal-400 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
             type="button"
+            @click="send()"
           >
             Send
           </button>
@@ -57,7 +58,23 @@
 <script>
 export default {
   methods: {
-    send() {}
+    async send() {
+      const version = "";
+      console.log("Sending");
+      const body = {
+        version,
+        userAgent: navigator.userAgent,
+        language: navigator.language,
+        content: document.querySelector("#message").value,
+        username: document.querySelector("#grid-first-name").value
+      };
+
+      const res = await fetch("https://grahamsh-contact.glitch.me/send", {
+        method: "POST",
+        body: JSON.stringify(body)
+      });
+      res;
+    }
   }
 };
 </script>
