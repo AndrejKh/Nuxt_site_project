@@ -13,7 +13,7 @@ img: '/logo.svg'
 The other day, I decided to make a setup script for wasteof.money. If you don't know what wasteof.money is, check it out at dev.wasteof.money!
 To start, I wanted to write to .env. The script I wrote for that simply wrote to .env using fs.
 
-```js
+```js[env.js]
 const fs = require("fs");
 fs.writeFile(".env", `DB_URL=`, "utf8", function () {
   console.log("Got it!");
@@ -22,7 +22,7 @@ fs.writeFile(".env", `DB_URL=`, "utf8", function () {
 
 Then, I wanted to have the user be able to put in inputs. For that, I used the prompts package from NPM. My code now looked like this:
 
-```js
+```js[env.js]
 const prompts = require("prompts");
 const fs = require("fs");
 (async () => {
@@ -58,7 +58,7 @@ At this point, the code was working, but it still didn't satisfy me. I wanted th
 
 I decided that it should also ask the user if they are using local, or Atlas. My final version looked like this.
 
-```js
+```js[env.js]
 const prompts = require("prompts");
 const fs = require("fs");
 require("dotenv").config();

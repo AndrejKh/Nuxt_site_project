@@ -21,7 +21,7 @@
     </article>
   </main>
 </template>
-<style>
+<style class="postcss">
 .prose .list-none > li::before {
   display: none;
 }
@@ -37,9 +37,81 @@
 a:hover .icon.icon-link {
   visibility: visible !important;
 }
+pre[class*="language-"].line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre[class*="language-"].line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 1px solid #999;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line-numbers-rows > span {
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #999;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+.nuxt-content-highlight {
+    @apply relative;
+}
+.nuxt-content-highlight > .filename {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  line-height: 1;
+  margin-top: 0.75rem;
+  margin-right: 1rem;
+  position: absolute;
+  top: 0;
+  right: 0;
+  --tw-text-opacity: 1;
+  color: rgba(243, 244, 246, var(--tw-text-opacity));
+  letter-spacing: -0.025em;
+  z-index: 10;
+  color: black;
+}
+
+/* Add top padding to code blocks with filename */
+.nuxt-content-highlight > .filename + pre[class*="language-"] {
+  @apply pt-8;
+}
+
 </style>
 <script>
+  import Prism from 'prismjs'
+  import 'prismjs/plugins/line-numbers/prism-line-numbers.js'
+
 export default {
+  mounted () {
+        Prism.highlightAll()
+  },
+
   head() {
     return {
       title: `${this.article.title} - Blog - GrahamSH`
@@ -59,3 +131,8 @@ export default {
   }
 };
 </script>
+<style class="postcss">
+article.prose {
+  max-width: 80ch !important;
+}
+</style>
