@@ -25,3 +25,11 @@
     </div>
   </main>
 </template>
+<script>
+export default {
+  head() {
+    return {
+      title: `About - GrahamSH`
+    };
+  },
+}
