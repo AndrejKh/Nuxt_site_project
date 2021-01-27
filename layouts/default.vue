@@ -65,3 +65,8 @@ export default {
 
 }
 </script>
+<style>
+  main {
+    margin-top: 7rem;
+  }
+</style>
