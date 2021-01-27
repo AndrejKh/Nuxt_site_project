@@ -18,6 +18,14 @@
       </nav>
 
       <nuxt-content :document="article" />
+      <script
+        src="https://utteranc.es/client.js"
+        repo="grahamsh-llk/site"
+        issue-term="title"
+        theme="github-light"
+        crossorigin="anonymous"
+        async
+      ></script>
     </article>
   </main>
 </template>
@@ -77,7 +85,7 @@ pre[class*="language-"].line-numbers > code {
   text-align: right;
 }
 .nuxt-content-highlight {
-    @apply relative;
+  @apply relative;
 }
 .nuxt-content-highlight > .filename {
   font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
@@ -101,15 +109,14 @@ pre[class*="language-"].line-numbers > code {
 .nuxt-content-highlight > .filename + pre[class*="language-"] {
   @apply pt-8;
 }
-
 </style>
 <script>
-  import Prism from 'prismjs'
-  import 'prismjs/plugins/line-numbers/prism-line-numbers.js'
+import Prism from "prismjs";
+import "prismjs/plugins/line-numbers/prism-line-numbers.js";
 
 export default {
-  mounted () {
-        Prism.highlightAll()
+  mounted() {
+    Prism.highlightAll();
   },
 
   head() {
