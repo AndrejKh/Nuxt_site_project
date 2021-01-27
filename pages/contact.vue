@@ -57,6 +57,11 @@
 </template>
 <script>
 export default {
+  head() {
+    return {
+      title: `About - GrahamSH`
+    };
+  },
   methods: {
     async send() {
       const version = "";
