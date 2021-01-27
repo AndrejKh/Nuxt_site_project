@@ -1,5 +1,5 @@
 <template>
-  <main class="container mx-auto px-4 mt-28 md:mt-20 h-screen">
+  <main class="container mx-auto px-4 sm:mt-28 mt-28 md:mt-20 h-screen">
     <div class="hero py-16">
       <!-- container -->
       <div class="container px-4 sm:px-8 lg:px-16 xl:px-20 mx-auto">
@@ -34,19 +34,11 @@
 </template>
 
 <script>
-export default {};
+export default {
+head () {
+ return {
+  title: 'Home - GrahamSH',
+  }
+  },
+};
 </script>
-
-<style>
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
-}
-</style>
