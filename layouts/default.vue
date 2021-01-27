@@ -21,6 +21,10 @@
             <NuxtLink to="/about" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
                 About
             </NuxtLink>
+            <NuxtLink to="/contact" class="my-3 block text-gray-300 hover:text-gray-100 text-sm font-medium duration-700">
+                Contact
+            </NuxtLink>
+
         </div>
 
 
