@@ -6,7 +6,7 @@
       Blog
     </h1>
     <ul>
-      <li v-for="article in articles" class="xs:w-full md:w-1/2 px-2 xs:mb-6 md:mb-12" :key="article.slug">
+      <li v-for="article in articles" class="xs:w-full md:w-1/2 px-2 xs:mb-6 mb-12" :key="article.slug">
         <NuxtLink class="flex transition-shadow duration-150 ease-in-out shadow-sm focus:shadow hover:shadow-md xxlmax:flex-col bg-gray-300 rounded-xl" :to="{ name: 'blog-slug', params: { slug: article.slug } }">
           <img v-if="article.img" class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover" :src="article.img" />
           <div
