@@ -1,6 +1,7 @@
 import tailwindTypography from '@tailwindcss/typography'
 
 export default {
+  telemetry: false,
   // Target: https://go.nuxtjs.dev/config-target
   target: 'server',
   generate: {
