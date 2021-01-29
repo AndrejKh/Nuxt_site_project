@@ -46,6 +46,11 @@ export default {
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
+  pwa: {
+    icon: {
+      source: `[srcDir]/[staticDir]/logo.svg`
+    }
+  },
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
@@ -53,11 +58,6 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/pwa'
   ],
-  pwa: {
-  icon: {
-    source: '[srcDir]/[staticDir]/logo.svg'
-  }
-  },
 
 
   // Modules: https://go.nuxtjs.dev/config-modules
