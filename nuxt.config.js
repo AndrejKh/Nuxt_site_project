@@ -51,8 +51,14 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-'@nuxtjs/pwa'
+    '@nuxtjs/pwa'
   ],
+  pwa: {
+  icon: {
+    source: '[srcDir]/[staticDir]/logo.svg'
+  }
+  },
+
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxt/content'],
