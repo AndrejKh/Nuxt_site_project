@@ -69,7 +69,27 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxt/content'],
+  modules: ['@nuxt/content', '@nuxtjs/feed'],
+    feed: [
+    {
+      path: '/feed.xml',
+      async create(feed, args) => {  
+        // create the feed
+      },
+      cacheTime: 1000 * 60 * 15,
+      type: 'rss2',
+      data: [ 'some', 'info' ]
+    },
+    {
+      path: '/feed.json',
+      async create(feed, args) => {  
+        // create the feed
+      },
+      cacheTime: 1000 * 60 * 15,
+      type: 'json1',
+      data: [ 'other', 'info' ]
+    }
+  ],
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
