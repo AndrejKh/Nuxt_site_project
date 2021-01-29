@@ -56,9 +56,17 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/pwa'
+    '@nuxtjs/pwa',
+    '@nuxtjs/image'
   ],
-
+  workbox: {
+    runtime: [
+      {
+        urlPattern: 'https://fonts.gstatic.com/.*',
+        handler: 'staleWhileRevalidate'
+      }
+    ]
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: ['@nuxt/content'],
