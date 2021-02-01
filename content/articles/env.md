@@ -4,7 +4,7 @@ author:
   name: GrahamSH
   bio: All about GrahamSH
   image: https://images.unsplash.com/
-title: Env
+title: Creating an Env Setup Script
 categories: nodejs test
 date: 2021-01-13T22:11:12.333Z
 img: '/logo.svg'
