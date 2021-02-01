@@ -1,4 +1,4 @@
-# site-nuxt
+# GrahamSH
 This is the repository for @GrahamSH-LLK's new Nuxt & Tailwind site. It's a WIP, and it will change regularly. You can check the site out at https://staging.grahamsh.com.
 ## Build Setup
 
