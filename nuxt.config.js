@@ -56,9 +56,20 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
+    '@nuxtjs/onesignal',
     '@nuxtjs/pwa',
     '@nuxt/image'
   ],
+  oneSignal: {
+    init: {
+      appId: '6441a31b-b647-41d4-9f51-4e15c6b4fef9',
+      allowLocalhostAsSecureOrigin: true,
+      welcomeNotification: {
+          disable: true
+      }
+    }
+  },
+  
   workbox: {
     runtime: [
       {
