@@ -64,7 +64,12 @@ export default {
       {
         urlPattern: 'https://fonts.gstatic.com/.*',
         handler: 'staleWhileRevalidate'
+      },
+      {
+        urlPattern: '.*',
+        handler: 'staleWhileRevalidate'
       }
+
     ]
   },
 
