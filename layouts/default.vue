@@ -76,6 +76,8 @@
 <script>
 export default {
   mounted() {
+  this.$nextTick(() => {
+
     this.$OneSignal.push(() => {
     this.$OneSignal.isPushNotificationsEnabled((isEnabled) => {
     if (isEnabled) {
@@ -90,7 +92,7 @@ export default {
 window.$OneSignal.push(['addListenerForNotificationOpened', (data) => {
   console.log('Received NotificationOpened:', data )}
 ]);
-
+  })
   },
   head() {
     return {
