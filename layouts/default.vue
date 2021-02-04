@@ -106,4 +106,7 @@ window.$OneSignal.push(['addListenerForNotificationOpened', (data) => {
 main {
   margin-top: 7rem;
 }
+.error svg {
+    display: inline!important;
+}
 </style>
