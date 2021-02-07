@@ -26,6 +26,7 @@
         crossorigin="anonymous"
         async
       ></script>
+      <NextPrev/>
     </article>
   </main>
 </template>
@@ -101,7 +102,7 @@ pre[class*="language-"].line-numbers > code {
   --tw-text-opacity: 1;
   color: rgba(243, 244, 246, var(--tw-text-opacity));
   letter-spacing: -0.025em;
-  z-index: 10;
+  z-index: 2;
   color: black;
 }
 
