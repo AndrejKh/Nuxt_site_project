@@ -16,6 +16,7 @@
 
 
             </ul>
+<Search/>
         </div>
     </div>
 </nav>
