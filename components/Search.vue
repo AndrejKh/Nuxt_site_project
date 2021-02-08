@@ -1,12 +1,12 @@
 <template>
   <div>
-         <div class="pt-2 relative mx-auto text-gray-600">
+         <div class="relative mx-auto text-gray-600">
 
         <input class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
 
          autocomplete="off" type="search" name="search" v-model="searchQuery" placeholder="Search blog">
 
-        <button type="submit" class="absolute right-0 top-0 mt-5 mr-4">
+        <button type="submit" class="absolute right-0 top-0 mt-3 mr-4">
 <svg v-show="searchQuery" class="text-gray-600 h-4 w-4 fill-current text-1xl" @click="searchQuery = ''" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"> <path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" /> </svg>
           <svg v-show="!searchQuery" class="text-gray-600 h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg"
 
