@@ -6,40 +6,64 @@
       Blog
     </h1>
     <ul>
-      <li v-for="article in articles" class="xs:w-full md:w-1/2 px-2 xs:mb-6 mb-12" :key="article.slug">
-        <NuxtLink class="flex transition-shadow duration-150 ease-in-out shadow-sm focus:shadow hover:shadow-md xxlmax:flex-col bg-gray-300 rounded-xl" :to="{ name: 'blog-slug', params: { slug: article.slug } }">
-          <img v-if="article.img" class="h-48 xxlmin:w-1/2 xxlmax:w-full object-cover" :src="article.img" />
-          <div
-            class="p-6 flex flex-col justify-between xxlmin:w-1/2 xxlmax:w-full"
-          >
-            <h2 class="font-bold">{{ article.title }}</h2>
-            <p>by Exploding Bricks</p>
-            <p class="font-bold text-gray-600 text-sm">{{ article.description }}</p>
+      <div v-for="article in articles" class="mt-6" :key="article.slug">
+        <div class="max-w-4xl px-10 py-6 bg-white rounded-lg shadow-md">
+          <div class="flex justify-between items-center">
+            <span class="font-light text-gray-600">{{ formatDate(article.updatedAt) }}</span>
           </div>
-        </NuxtLink>
-      </li>
-
+          <div class="mt-2">
+            <NuxtLink
+              :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+              class="text-2xl text-gray-700 font-bold hover:underline"
+              >{{ article.title }}</NuxtLink
+            >
+            <p class="mt-2 text-gray-600">
+              {{ article.description }}
+            </p>
+          </div>
+          <div class="flex justify-between items-center mt-4">
+            <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }" class="text-blue-500 hover:underline">Read more</NuxtLink>
+            <div>
+              <span class="flex items-center"
+                ><img
+                  :src="article.author.image"
+                  alt="avatar"
+                  class="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block"
+                />
+                <h1 class="text-gray-700 font-bold">{{ article.author.name }}</h1>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
     </ul>
   </main>
 </template>
 <script>
-  export default {
+export default {
   head() {
     return {
       title: `Blog - GrahamSH`
     };
   },
-    async asyncData({ $content, params }) {
-      const articles = await $content('articles', params.slug)
-        .only(['title', 'description', 'img', 'slug', 'author'])
-        .sortBy('createdAt', 'desc')
-        .fetch()
+  async asyncData({ $content, params }) {
+    const articles = await $content("articles", params.slug)
+      .only(["title", "description", "img", "slug", "author", "updatedAt"])
+      .sortBy("createdAt", "desc")
+      .fetch();
 
-      return {
-        articles
-      }
+    return {
+      articles
+    };
+  },
+  methods: {
+    formatDate(date) {
+      const options = { year: "numeric", month: "long", day: "numeric" };
+      return new Date(date).toLocaleDateString("en", options);
     }
-  }
+  },
+
+};
 </script>
 <style class="postcss">
 .article-card {
