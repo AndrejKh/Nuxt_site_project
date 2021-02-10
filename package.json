@@ -16,6 +16,7 @@
     "@nuxtjs/feed": "^2.0.0",
     "@nuxtjs/onesignal": "^3.0.0-beta.16",
     "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/sitemap": "^2.4.0",
     "@tailwindcss/typography": "^0.4.0",
     "autoprefixer": "^9.8.6",
     "core-js": "^3.8.2",
