@@ -1,4 +1,14 @@
 import tailwindTypography from '@tailwindcss/typography'
+const createSitemapRoutes = async () => {
+  let routes = [];
+  const { $content } = require('@nuxt/content')
+  if (posts === null || posts.length === 0)
+    posts = await $content('blog').fetch();
+  for (const post of posts) {
+    routes.push(`blog/${post.slug}`);
+  }
+  return routes;
+}
 
 export default {
   telemetry: false,
@@ -94,5 +104,7 @@ export default {
   sitemap: {
     hostname: 'https://grahamsh.com',
     gzip: true,
+    routes: createSitemapRoutes,
+    exclude: ['/articles/**'],
 },
 }
