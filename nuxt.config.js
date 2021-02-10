@@ -1,13 +1,12 @@
 import tailwindTypography from '@tailwindcss/typography'
 const createSitemapRoutes = async () => {
   let routes = [];
-  const { $content } = require('@nuxt/content')
-  if (posts === null || posts.length === 0) { 
+  const { $content } = require('@nuxt/content') 
     let posts = await $content('articles').fetch();
-  }
-  for (const post of posts) {
-    routes.push(`blog/${post.slug}`);
-  }
+posts.forEach(post => {
+ console.log(post)
+ routes.push(`blog/${post.slug}`);
+  })
   return routes;
 }
 
