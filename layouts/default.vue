@@ -58,8 +58,8 @@
       <!-- Copyright Bar -->
       <div class="pt-2">
         <div
-          class="flex pb-5 px-3 m-auto pt-5 
-            border-t border-gray-500 text-gray-400 text-sm 
+          class="flex pb-5 px-3 m-auto pt-5
+            border-t border-gray-500 text-gray-400 text-sm
             flex-col md:flex-row max-w-6xl"
         >
           <div class="mt-2">
@@ -75,25 +75,6 @@
 
 <script>
 export default {
-  mounted() {
-  this.$nextTick(() => {
-
-    this.$OneSignal.push(() => {
-    this.$OneSignal.isPushNotificationsEnabled((isEnabled) => {
-    if (isEnabled) {
-      console.log('Push notifications are enabled!')
-    } else {
-      console.log('Push notifications are not enabled yet.')
-    }
-  })
-})
-
-// Using window and array form
-window.$OneSignal.push(['addListenerForNotificationOpened', (data) => {
-  console.log('Received NotificationOpened:', data )}
-]);
-  })
-  },
   head() {
     return {
       title: `GrahamSH`

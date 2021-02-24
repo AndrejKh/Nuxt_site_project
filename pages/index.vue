@@ -197,15 +197,74 @@
         </div>
       </div>
     </div>
+    <section>
+            <h2 class="mt-10 text-xl font-semibold text-gray-900 dark:text-gray-100">
+        My GitHub repositories
+      </h2>
+<div class="mt-3">
+        <div
+          v-if="$fetchState.pending"
+          class="grid grid-cols-1 gap-2 sm:grid-cols-2"
+        >
+          <Skeleton
+            v-for="item in 6"
+            :key="`repo-skeleton-${item}`"
+            type="repository"
+          />
+        </div>
+
+
+        <div v-if="$fetchState.error">
+          Error loading GitHub repositories
+        </div>
+
+    <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+    <a
+            v-for="(repo, index) in repos"
+            :key="`repo-${index}`"
+            :href="repo.html_url"
+            target="_blank"
+            rel="noreferrer"
+            title="Click here to visit this repository"
+          >
+            <Repo
+              :name="repo.name"
+              :language="repo.language"
+              :stars="repo.stargazers_count"
+              :description="repo.description || ''"
+              :forks="repo.forks"
+              class="h-full"
+            />
+          </a>
+</div>
+</div>
+</section>
   </main>
 </template>
 
 <script>
 export default {
+  data() {
+    return {
+      repos: []
+    }
+  },
   head() {
     return {
       title: "Home - GrahamSH"
     };
-  }
+  },
+  fetchOnServer: false,
+  async fetch() {
+    const repos = (await (await fetch(
+      "https://api.github.com/users/GrahamsH-LLK/repos"
+    )).json())
+    console.log(repos)
+    const filter = []
+    this.repos = repos
+      ?.filter((repo) => repo.fork === false && !filter.includes(repo.name))
+      ?.sort((a, b) => b?.stargazers_count - a?.stargazers_count)
+  },
+
 };
 </script>

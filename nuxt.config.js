@@ -1,7 +1,8 @@
 import tailwindTypography from '@tailwindcss/typography'
+import lineClamp from 'tailwindcss-line-clamp';
 const createSitemapRoutes = async () => {
   let routes = [];
-  const { $content } = require('@nuxt/content') 
+  const { $content } = require('@nuxt/content')
     let posts = await $content('articles').fetch();
 posts.forEach(post => {
  console.log(post)
@@ -11,6 +12,7 @@ posts.forEach(post => {
 }
 
 export default {
+  ssr: false,
   telemetry: false,
   // Target: https://go.nuxtjs.dev/config-target
   target: 'server',
@@ -40,7 +42,7 @@ export default {
   },
   tailwindcss: {
     config: {
-      plugins: [tailwindTypography],
+      plugins: [tailwindTypography,lineClamp],
       theme: {
         screens: {
           sm: '640px',
@@ -66,20 +68,10 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
-    '@nuxtjs/onesignal',
     '@nuxtjs/pwa',
-    '@nuxt/image'
+    '@nuxtjs/svg'
   ],
-  oneSignal: {
-    init: {
-      appId: '6441a31b-b647-41d4-9f51-4e15c6b4fef9',
-      allowLocalhostAsSecureOrigin: true,
-      welcomeNotification: {
-          disable: true
-      }
-    }
-  },
-  
+
   workbox: {
     runtime: [
       {
