@@ -2,7 +2,7 @@
 author:
   name: GrahamSH
   bio: All about GrahamSH
-  image: https://images.unsplash.com/
+  image: /logo.svg
 title: Welcome to my new Nuxt site!
 categories: site
 ---
