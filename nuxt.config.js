@@ -70,8 +70,7 @@ export default {
     '@nuxtjs/tailwindcss',
     '@nuxtjs/pwa',
     '@nuxtjs/svg',
-    'nuxt-vite'
-  ],
+     ],
 
   workbox: {
     runtime: [
@@ -88,7 +87,13 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ['@nuxt/content', '@nuxtjs/sitemap'],
+  modules: ['@nuxt/content', '@nuxtjs/sitemap', 'vue-plausible'
+  ],
+  plausible: {
+    domain: 'ocular.jeffalo.net',
+    apiHost: 'https://analytics.jeffalo.net'
+  },
+
 
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
