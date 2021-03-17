@@ -69,7 +69,8 @@ export default {
     // https://go.nuxtjs.dev/tailwindcss
     '@nuxtjs/tailwindcss',
     '@nuxtjs/pwa',
-    '@nuxtjs/svg'
+    '@nuxtjs/svg',
+    'nuxt-vite'
   ],
 
   workbox: {
