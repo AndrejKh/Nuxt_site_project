@@ -91,7 +91,7 @@ export default {
   ],
   plausible: {
     domain: 'ocular.jeffalo.net',
-    apiHost: 'https://analytics.jeffalo.net'
+    apiHost: 'https://grahamsh.com'
   },
 
 
