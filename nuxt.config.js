@@ -90,8 +90,8 @@ export default {
   modules: ['@nuxt/content', '@nuxtjs/sitemap', 'vue-plausible'
   ],
   plausible: {
-    domain: 'ocular.jeffalo.net',
-    apiHost: 'https://grahamsh.com'
+    domain: 'grahamsh.com',
+    apiHost: 'https://analytics.jeffalo.net'
   },
 
 
