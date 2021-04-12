@@ -34,7 +34,7 @@ export default {
   data() {
     return {
       icon: this.name ? require(`~/assets/icons/${this.name}.svg?raw`) : null,
-    }
+    };
   },
-}
+};
 </script>

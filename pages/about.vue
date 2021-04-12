@@ -29,8 +29,8 @@
 export default {
   head() {
     return {
-      title: `About - GrahamSH`
+      title: `About - GrahamSH`,
     };
   },
-}
+};
 </script>

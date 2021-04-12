@@ -7,9 +7,7 @@
     </h1>
 
     <div class="prose prose-indigo">
-      <h2 >
-        Sorry, we couldn't find that page!
-      </h2>
+      <h2>Sorry, we couldn't find that page!</h2>
       <h4><nuxt-link to="/">Go home</nuxt-link></h4>
     </div>
   </main>
@@ -18,8 +16,8 @@
 export default {
   head() {
     return {
-      title: `404 - GrahamSH`
+      title: `404 - GrahamSH`,
     };
   },
-}
+};
 </script>

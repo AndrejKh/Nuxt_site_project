@@ -7,7 +7,7 @@ author:
 title: Creating an Env Setup Script
 categories: nodejs test
 date: 2021-01-13T22:11:12.333Z
-img: '/logo.svg'
+img: "/logo.svg"
 ---
 
 The other day, I decided to make a setup script for wasteof.money. If you don't know what wasteof.money is, check it out at dev.wasteof.money!
@@ -116,4 +116,3 @@ const url = process.env.DB_URL || "localhost/social";
   );
 })();
 ```
-

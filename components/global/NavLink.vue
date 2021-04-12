@@ -6,8 +6,8 @@
       active-class="active"
       :to="to"
       exact
-      ><slot /></NuxtLink
-    >
+      ><slot
+    /></NuxtLink>
   </li>
 </template>
 <script>
@@ -15,8 +15,8 @@ export default {
   props: {
     to: {
       type: String,
-      required: true
-    }
-  }
-}
+      required: true,
+    },
+  },
+};
 </script>

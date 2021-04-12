@@ -32,7 +32,7 @@
             Message
           </label>
           <textarea
-            class=" no-resize appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
+            class="no-resize appearance-none block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500 h-48 resize-none"
             id="message"
           ></textarea>
           <p class="text-gray-600 text-xs italic">
@@ -59,7 +59,7 @@
 export default {
   head() {
     return {
-      title: `About - GrahamSH`
+      title: `About - GrahamSH`,
     };
   },
   methods: {
@@ -71,15 +71,15 @@ export default {
         userAgent: navigator.userAgent,
         language: navigator.language,
         content: document.querySelector("#message").value,
-        username: document.querySelector("#grid-first-name").value
+        username: document.querySelector("#grid-first-name").value,
       };
 
       const res = await fetch("https://grahamsh-contact.glitch.me/send", {
         method: "POST",
-        body: JSON.stringify(body)
+        body: JSON.stringify(body),
       });
       res;
-    }
-  }
+    },
+  },
 };
 </script>

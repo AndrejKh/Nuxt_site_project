@@ -1,5 +1,5 @@
 <template>
-  <main class="container mx-auto px-4 mt-28 md:mt-20 h-screen ">
+  <main class="container mx-auto px-4 mt-28 md:mt-20 h-screen">
     <h1
       class="text-4xl mb-6 tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
     >
@@ -9,7 +9,9 @@
       <div v-for="article in articles" class="mt-6" :key="article.slug">
         <div class="max-w-4xl px-10 py-6 bg-white rounded-lg shadow-md">
           <div class="flex justify-between items-center">
-            <span class="font-light text-gray-600">{{ formatDate(article.updatedAt) }}</span>
+            <span class="font-light text-gray-600">{{
+              formatDate(article.updatedAt)
+            }}</span>
           </div>
           <div class="mt-2">
             <NuxtLink
@@ -22,7 +24,11 @@
             </p>
           </div>
           <div class="flex justify-between items-center mt-4">
-            <NuxtLink :to="{ name: 'blog-slug', params: { slug: article.slug } }" class="text-blue-500 hover:underline">Read more</NuxtLink>
+            <NuxtLink
+              :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+              class="text-blue-500 hover:underline"
+              >Read more</NuxtLink
+            >
             <div>
               <span class="flex items-center"
                 ><img
@@ -30,7 +36,9 @@
                   alt="avatar"
                   class="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block"
                 />
-                <h1 class="text-gray-700 font-bold">{{ article.author.name }}</h1>
+                <h1 class="text-gray-700 font-bold">
+                  {{ article.author.name }}
+                </h1>
               </span>
             </div>
           </div>
@@ -43,7 +51,7 @@
 export default {
   head() {
     return {
-      title: `Blog - GrahamSH`
+      title: `Blog - GrahamSH`,
     };
   },
   async asyncData({ $content, params }) {
@@ -53,16 +61,15 @@ export default {
       .fetch();
 
     return {
-      articles
+      articles,
     };
   },
   methods: {
     formatDate(date) {
       const options = { year: "numeric", month: "long", day: "numeric" };
       return new Date(date).toLocaleDateString("en", options);
-    }
+    },
   },
-
 };
 </script>
 <style class="postcss">

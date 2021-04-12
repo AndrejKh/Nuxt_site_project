@@ -26,7 +26,7 @@
         crossorigin="anonymous"
         async
       ></script>
-      <NextPrev/>
+      <NextPrev />
     </article>
   </main>
 </template>
@@ -122,7 +122,7 @@ export default {
 
   head() {
     return {
-      title: `${this.article.title} - Blog - GrahamSH`
+      title: `${this.article.title} - Blog - GrahamSH`,
     };
   },
 
@@ -130,13 +130,13 @@ export default {
     formatDate(date) {
       const options = { year: "numeric", month: "long", day: "numeric" };
       return new Date(date).toLocaleDateString("en", options);
-    }
+    },
   },
   async asyncData({ $content, params }) {
     const article = await $content("articles", params.slug).fetch();
 
     return { article };
-  }
+  },
 };
 </script>
 <style class="postcss">

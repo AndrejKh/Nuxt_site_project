@@ -1,10 +1,16 @@
 <template>
   <div>
-    <NuxtLink v-if="prev" :to="{ name: 'blog-slug', params: { slug: prev.slug } }">
+    <NuxtLink
+      v-if="prev"
+      :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
+    >
       {{ prev.title }}
     </NuxtLink>
 
-    <NuxtLink v-if="next" :to="{ name: 'blog-slug', params: { slug: next.slug } }">
+    <NuxtLink
+      v-if="next"
+      :to="{ name: 'blog-slug', params: { slug: next.slug } }"
+    >
       {{ next.title }}
     </NuxtLink>
   </div>
@@ -13,15 +19,15 @@
 <script>
 export default {
   async asyncData({ $content, params }) {
-    const [prev, next] = await $content('articles')
-      .sortBy('createdAt', 'asc')
+    const [prev, next] = await $content("articles")
+      .sortBy("createdAt", "asc")
       .surround(params.slug)
-      .fetch()
+      .fetch();
 
     return {
       prev,
-      next
-    }
-  }
-}
+      next,
+    };
+  },
+};
 </script>

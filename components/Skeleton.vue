@@ -80,7 +80,7 @@ export default {
   data() {
     return {
       itemLoaded: false,
-    }
+    };
   },
-}
+};
 </script>

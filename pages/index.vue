@@ -3,15 +3,15 @@
     <div class="hero py-16">
       <!-- container -->
       <div class="container px-4 sm:px-8 lg:px-16 xl:px-20 mx-auto">
-        <div class=" grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
+        <div class="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
           <!-- hero text -->
-          <div class=" col-span-6">
+          <div class="col-span-6">
             <h1
-              class=" font-bold text-4xl md:text-5xl max-w-xl text-gray-900 leading-tight"
+              class="font-bold text-4xl md:text-5xl max-w-xl text-gray-900 leading-tight"
             >
               Hi, I'm @GrahamSH
             </h1>
-            <hr class=" w-12 h-1 bg-indigo-600 rounded-full mt-8" />
+            <hr class="w-12 h-1 bg-indigo-600 rounded-full mt-8" />
             <p
               class="text-gray-800 text-2xl leading-relaxed mt-8 font-semibold"
             >
@@ -62,7 +62,11 @@
                       focusable="false"
                       width="1em"
                       height="1em"
-                      style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+                      style="
+                        -ms-transform: rotate(360deg);
+                        -webkit-transform: rotate(360deg);
+                        transform: rotate(360deg);
+                      "
                       preserveAspectRatio="xMidYMid meet"
                       viewBox="0 0 24 24"
                       class="h-6 w-6"
@@ -101,7 +105,11 @@
                       focusable="false"
                       width="1em"
                       height="1em"
-                      style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+                      style="
+                        -ms-transform: rotate(360deg);
+                        -webkit-transform: rotate(360deg);
+                        transform: rotate(360deg);
+                      "
                       preserveAspectRatio="xMidYMid meet"
                       viewBox="0 0 24 24"
                       class="h-6 w-6"
@@ -198,10 +206,10 @@
       </div>
     </div>
     <section>
-            <h2 class="mt-10 text-xl font-semibold text-gray-900 dark:text-gray-100">
+      <h2 class="mt-10 text-xl font-semibold text-gray-900 dark:text-gray-100">
         My GitHub repositories
       </h2>
-<div class="mt-3">
+      <div class="mt-3">
         <div
           v-if="$fetchState.pending"
           class="grid grid-cols-1 gap-2 sm:grid-cols-2"
@@ -213,13 +221,10 @@
           />
         </div>
 
+        <div v-if="$fetchState.error">Error loading GitHub repositories</div>
 
-        <div v-if="$fetchState.error">
-          Error loading GitHub repositories
-        </div>
-
-    <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
-    <a
+        <div class="grid grid-cols-1 gap-2 sm:grid-cols-2">
+          <a
             v-for="(repo, index) in repos"
             :key="`repo-${index}`"
             :href="repo.html_url"
@@ -236,9 +241,9 @@
               class="h-full"
             />
           </a>
-</div>
-</div>
-</section>
+        </div>
+      </div>
+    </section>
   </main>
 </template>
 
@@ -246,25 +251,24 @@
 export default {
   data() {
     return {
-      repos: []
-    }
+      repos: [],
+    };
   },
   head() {
     return {
-      title: "Home - GrahamSH"
+      title: "Home - GrahamSH",
     };
   },
   fetchOnServer: false,
   async fetch() {
-    const repos = (await (await fetch(
-      "https://api.github.com/users/GrahamsH-LLK/repos"
-    )).json())
-    console.log(repos)
-    const filter = []
+    const repos = await (
+      await fetch("https://api.github.com/users/GrahamsH-LLK/repos")
+    ).json();
+    console.log(repos);
+    const filter = [];
     this.repos = repos
       ?.filter((repo) => repo.fork === false && !filter.includes(repo.name))
-      ?.sort((a, b) => b?.stargazers_count - a?.stargazers_count)
+      ?.sort((a, b) => b?.stargazers_count - a?.stargazers_count);
   },
-
 };
 </script>

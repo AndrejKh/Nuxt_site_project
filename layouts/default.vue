@@ -58,9 +58,7 @@
       <!-- Copyright Bar -->
       <div class="pt-2">
         <div
-          class="flex pb-5 px-3 m-auto pt-5
-            border-t border-gray-500 text-gray-400 text-sm
-            flex-col md:flex-row max-w-6xl"
+          class="flex pb-5 px-3 m-auto pt-5 border-t border-gray-500 text-gray-400 text-sm flex-col md:flex-row max-w-6xl"
         >
           <div class="mt-2">
             © Copyright 2021 GrahamSH. All Rights Reserved.
@@ -75,19 +73,26 @@
 
 <script>
 export default {
+  jsonld() {
+    return {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      url: "https://grahamsh.com",
+      logo: "https://grahamsh.com/logo.svg",
+    };
+  },
   head() {
     return {
-      title: `GrahamSH`
+      title: `GrahamSH`,
     };
-  }
+  },
 };
-
 </script>
 <style class="postcss">
 main {
   margin-top: 7rem;
 }
 .error svg {
-    display: inline!important;
+  display: inline !important;
 }
 </style>
