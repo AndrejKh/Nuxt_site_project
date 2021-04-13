@@ -18,6 +18,8 @@
       </nav>
 
       <nuxt-content :document="article" />
+      <NextPrev :prev="prev" :next="next" class="mt-8" />
+
       <script
         src="https://utteranc.es/client.js"
         repo="grahamsh-llk/site"
@@ -26,7 +28,6 @@
         crossorigin="anonymous"
         async
       ></script>
-      <NextPrev />
     </article>
   </main>
 </template>
@@ -134,8 +135,13 @@ export default {
   },
   async asyncData({ $content, params }) {
     const article = await $content("articles", params.slug).fetch();
+    const [prev, next] = await $content("articles")
+      .only(["title", "slug"])
+      .sortBy("createdAt", "asc")
+      .surround(params.slug)
+      .fetch();
 
-    return { article };
+    return { article, prev, next };
   },
 };
 </script>

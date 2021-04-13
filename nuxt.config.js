@@ -96,5 +96,5 @@ export default {
     routes: createSitemapRoutes,
     exclude: ["/articles/**"],
   },
-  plugins: ["~/plugins/json-ld"],
+  plugins: ["~/plugins/json-ld", "~/plugins/unicons"],
 };

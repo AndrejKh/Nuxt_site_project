@@ -2,10 +2,11 @@
 # .png is unformattable (binary)
 */*.ico
 # .ico is unformattable (same as above)
-*/*.svg
+*.svg
 # Prettier doesn't support svg yet
 .* 
 # Most . files shouldn't be formatted
 .*/
 # Most . folders shouldn't be formatted
 .github/*
+# .github shouldn't be formatted

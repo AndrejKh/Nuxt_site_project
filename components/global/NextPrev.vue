@@ -1,33 +1,40 @@
 <template>
-  <div>
+  <div class="flex justify-between">
     <NuxtLink
       v-if="prev"
       :to="{ name: 'blog-slug', params: { slug: prev.slug } }"
+      class="text-primary font-bold hover:underline"
     >
-      {{ prev.title }}
+      <unicon name="arrow-left" fill="currentColor" /> {{ prev.title }}
     </NuxtLink>
-
+    <span v-else>&nbsp;</span>
     <NuxtLink
       v-if="next"
       :to="{ name: 'blog-slug', params: { slug: next.slug } }"
+      class="font-bold hover:underline"
     >
-      {{ next.title }}
+      {{ next.title }} <unicon name="arrow-right" fill="currentColor" />
     </NuxtLink>
+    <span v-else>&nbsp;</span>
   </div>
 </template>
 
 <script>
 export default {
-  async asyncData({ $content, params }) {
-    const [prev, next] = await $content("articles")
-      .sortBy("createdAt", "asc")
-      .surround(params.slug)
-      .fetch();
-
-    return {
-      prev,
-      next,
-    };
+  props: {
+    prev: {
+      type: Object,
+      default: () => null,
+    },
+    next: {
+      type: Object,
+      default: () => null,
+    },
   },
 };
 </script>
+<style lang="postcss">
+.unicon {
+    vertical-align: text-bottom;
+}
+</style>
