@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@nuxt/content": "^1.11.1",
-    "@nuxt/image": "^0.4.4",
+    "@nuxt/image": "^0.4.5",
     "@nuxtjs/feed": "^2.0.0",
     "@nuxtjs/onesignal": "^3.0.0-beta.16",
     "@nuxtjs/pwa": "^3.3.5",
