@@ -35,6 +35,6 @@ export default {
 </script>
 <style lang="postcss">
 .unicon {
-    vertical-align: text-bottom;
+  vertical-align: text-bottom;
 }
 </style>

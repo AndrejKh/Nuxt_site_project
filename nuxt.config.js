@@ -66,7 +66,6 @@ export default {
     "@nuxtjs/tailwindcss",
     "@nuxtjs/pwa",
     "@nuxtjs/svg",
-    
   ],
 
   workbox: {
@@ -98,14 +97,11 @@ export default {
     exclude: ["/articles/**"],
   },
   plugins: ["~/plugins/json-ld", "~/plugins/unicons"],
-  storybook:{
-    stories: ['~/components/**/*.stories.mdx'],
-    addons: [
-      "@storybook/addon-docs"
-    ],
+  storybook: {
+    stories: ["~/components/**/*.stories.mdx"],
+    addons: ["@storybook/addon-docs"],
     parameters: {
       //viewMode: 'docs'
     },
-
-  }
+  },
 };

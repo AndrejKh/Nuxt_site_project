@@ -5,11 +5,10 @@ export default {
   components: InfoBox,
   argTypes: {
     text: {
-type: "string",
-description: "Normally a slot"
+      type: "string",
+      description: "Normally a slot",
     },
   },
-
 };
 
 export const Main = (args, { argTypes }) => ({

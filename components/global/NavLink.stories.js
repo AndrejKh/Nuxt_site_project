@@ -7,7 +7,7 @@ export default {
     text: {
       type: "string",
       description: "Normally a slot",
-      default:"Home"
+      default: "Home",
     },
   },
 };

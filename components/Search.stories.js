@@ -1,6 +1,5 @@
-
 export default {
-    title: 'Search',
-  }
-  
-  export const Default = () => '<Search />'
+  title: "Search",
+};
+
+export const Default = () => "<Search />";
