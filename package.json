@@ -23,7 +23,7 @@
     "nuxt": "^2.15.4",
     "nuxt-jsonld": "^1.5.0",
     "postcss": "^8.2.14",
-    "prettier": "^2.2.1",
+    "prettier": "^2.3.0",
     "tailwindcss": "^2",
     "vue-plausible": "^1.1.4",
     "vue-unicons": "^3.2.1"
