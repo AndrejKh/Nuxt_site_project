@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^4.1.2",
-    "nuxt-vite": "^0.1.0",
+    "nuxt-vite": "^0.1.1",
     "tailwindcss-line-clamp": "^1.0.5"
   }
 }
