@@ -20,14 +20,16 @@
       <nuxt-content :document="article" />
       <NextPrev :prev="prev" :next="next" class="mt-8" />
 
-      <script
-        src="https://utteranc.es/client.js"
-        repo="grahamsh-llk/site"
-        issue-term="title"
-        theme="github-light"
+<script src="https://giscus.app/client.js"
+        data-repo="grahamsh-llk/site"
+        data-repo-id="MDEwOlJlcG9zaXRvcnkzMzEwNzc5NDA="
+        data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyOTc4Nzgw"
+        data-mapping="title"
+        data-theme="light"
         crossorigin="anonymous"
-        async
-      ></script>
+        async>
+</script>
+
     </article>
   </main>
 </template>
