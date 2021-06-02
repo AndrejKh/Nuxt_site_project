@@ -113,6 +113,13 @@ pre[class*="language-"].line-numbers > code {
 .nuxt-content-highlight > .filename + pre[class*="language-"] {
   @apply pt-8;
 }
+.giscus-frame {
+    width: 100%;
+}
+article.prose {
+  max-width: 80ch !important;
+}
+
 </style>
 <script>
 import Prism from "prismjs";
@@ -147,8 +154,3 @@ export default {
   },
 };
 </script>
-<style class="postcss">
-article.prose {
-  max-width: 80ch !important;
-}
-</style>
