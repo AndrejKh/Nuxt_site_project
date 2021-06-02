@@ -6,38 +6,38 @@
       Blog
     </h1>
     <ul>
-      <div v-for="article in articles" class="mt-6" :key="article.slug">
+      <div v-for="blog in blogs" class="mt-6" :key="blog.slug">
         <div class="max-w-4xl px-10 py-6 bg-white rounded-lg shadow-md">
           <div class="flex justify-between items-center">
             <span class="font-light text-gray-600">{{
-              formatDate(article.updatedAt)
+              formatDate(blog.updatedAt)
             }}</span>
           </div>
           <div class="mt-2">
             <NuxtLink
-              :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+              :to="{ name: 'blog-slug', params: { slug: blog.slug } }"
               class="text-2xl text-gray-700 font-bold hover:underline"
-              >{{ article.title }}</NuxtLink
+              >{{ blog.title }}</NuxtLink
             >
             <p class="mt-2 text-gray-600">
-              {{ article.description }}
+              {{ blog.description }}
             </p>
           </div>
           <div class="flex justify-between items-center mt-4">
             <NuxtLink
-              :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+              :to="{ name: 'blog-slug', params: { slug: blog.slug } }"
               class="text-blue-500 hover:underline"
               >Read more</NuxtLink
             >
             <div>
               <span class="flex items-center"
                 ><img
-                  :src="article.author.image"
+                  :src="blog.author.image"
                   alt="avatar"
                   class="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block"
                 />
                 <h1 class="text-gray-700 font-bold">
-                  {{ article.author.name }}
+                  {{ blog.author.name }}
                 </h1>
               </span>
             </div>
@@ -55,13 +55,13 @@ export default {
     };
   },
   async asyncData({ $content, params }) {
-    const articles = await $content("articles", params.slug)
+    const blogs = await $content("blogs", params.slug)
       .only(["title", "description", "img", "slug", "author", "updatedAt"])
       .sortBy("createdAt", "desc")
       .fetch();
 
     return {
-      articles,
+      blogs,
     };
   },
   methods: {
@@ -73,13 +73,13 @@ export default {
 };
 </script>
 <style class="postcss">
-.article-card {
+.blog-card {
   border-radius: 8px;
 }
-.article-card a {
+.blog-card a {
   border-radius: 8px;
 }
-.article-card img div {
+.blog-card img div {
   border-radius: 8px 0 0 8px;
 }
 </style>

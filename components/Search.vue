@@ -48,15 +48,15 @@
     </div>
 
     <ul
-      v-if="articles.length"
+      v-if="blogs.length"
       class="z-10 absolute w-auto flex-1 top-20 bg-white dark:bg-gray-900 rounded-md border border-gray-300 overflow-hidden"
     >
-      <li v-for="article of articles" :key="article.slug">
+      <li v-for="blog of blogs" :key="blog.slug">
         <NuxtLink
-          :to="{ name: 'blog-slug', params: { slug: article.slug } }"
+          :to="{ name: 'blog-slug', params: { slug: blog.slug } }"
           class="flex px-4 py-2 items-center leading-5 transition ease-in-out duration-150 text-indigo-500 hover:text-black"
         >
-          {{ article.title }}
+          {{ blog.title }}
         </NuxtLink>
       </li>
     </ul>
@@ -67,16 +67,16 @@ export default {
   data() {
     return {
       searchQuery: "",
-      articles: [],
+      blogs: [],
     };
   },
   watch: {
     async searchQuery(searchQuery) {
       if (!searchQuery) {
-        this.articles = [];
+        this.blogs = [];
         return;
       }
-      this.articles = await this.$content("articles")
+      this.blogs = await this.$content("blogs")
         .limit(6)
         .search(searchQuery)
         .fetch();

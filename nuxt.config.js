@@ -3,7 +3,7 @@ import lineClamp from "tailwindcss-line-clamp";
 const createSitemapRoutes = async () => {
   let routes = [];
   const { $content } = require("@nuxt/content");
-  let posts = await $content("articles").fetch();
+  let posts = await $content("blog").fetch();
   posts.forEach((post) => {
     console.log(post);
     routes.push(`blog/${post.slug}`);
@@ -15,7 +15,7 @@ export default {
   ssr: false,
   telemetry: false,
   // Target: https://go.nuxtjs.dev/config-target
-  target: "server",
+  target: "static",
   generate: {
     async routes() {
       const { $content } = require("@nuxt/content");
@@ -96,7 +96,7 @@ export default {
     hostname: "https://grahamsh.com",
     gzip: true,
     routes: createSitemapRoutes,
-    exclude: ["/articles/**"],
+    exclude: ["/blogs/**"],
   },
   plugins: ["~/plugins/json-ld", "~/plugins/unicons"],
   storybook: {

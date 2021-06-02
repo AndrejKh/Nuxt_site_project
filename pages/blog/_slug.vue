@@ -1,14 +1,14 @@
 <template>
   <main class="container mx-auto px-4 mt-28 md:mt-16 min-h-screen">
-    <article class="prose">
-      <h1>{{ article.title }}</h1>
-      <p>{{ article.description }}</p>
-      <p>Post last updated: {{ formatDate(article.updatedAt) }}</p>
+    <blog class="prose">
+      <h1>{{ blog.title }}</h1>
+      <p>{{ blog.description }}</p>
+      <p>Post last updated: {{ formatDate(blog.updatedAt) }}</p>
       <nav>
         <h4>Table of contents</h4>
         <ul class="list-none">
           <li
-            v-for="link of article.toc"
+            v-for="link of blog.toc"
             :key="link.id"
             :class="{ 'py-2': link.depth === 2, 'ml-2 pb-2': link.depth === 3 }"
           >
@@ -17,7 +17,7 @@
         </ul>
       </nav>
 
-      <nuxt-content :document="article" />
+      <nuxt-content :document="blog" />
       <NextPrev :prev="prev" :next="next" class="mt-8" />
 
 <script src="https://giscus.app/client.js"
@@ -30,7 +30,7 @@
         async>
 </script>
 
-    </article>
+    </blog>
   </main>
 </template>
 <style class="postcss">
@@ -116,7 +116,7 @@ pre[class*="language-"].line-numbers > code {
 .giscus-frame {
     width: 100%;
 }
-article.prose {
+blog.prose {
   max-width: 80ch !important;
 }
 
@@ -132,7 +132,7 @@ export default {
 
   head() {
     return {
-      title: `${this.article.title} - Blog - GrahamSH`,
+      title: `${this.blog.title} - Blog - GrahamSH`,
     };
   },
 
@@ -143,14 +143,14 @@ export default {
     },
   },
   async asyncData({ $content, params }) {
-    const article = await $content("articles", params.slug).fetch();
-    const [prev, next] = await $content("articles")
+    const blog = await $content("blogs", params.slug).fetch();
+    const [prev, next] = await $content("blogs")
       .only(["title", "slug"])
       .sortBy("createdAt", "asc")
       .surround(params.slug)
       .fetch();
 
-    return { article, prev, next };
+    return { blog, prev, next };
   },
 };
 </script>
