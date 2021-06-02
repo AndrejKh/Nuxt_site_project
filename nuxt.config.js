@@ -89,7 +89,9 @@ export default {
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    parallel: true,
+  },
   sitemap: {
     hostname: "https://grahamsh.com",
     gzip: true,
