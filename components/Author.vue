@@ -2,7 +2,15 @@
   <div class="w-full px-2 xs:mb-6 md:mb-12 blog-card">
     <NuxtLink
       :to="`/blog/author/${author.name}`"
-      class="flex transition-shadow duration-150 ease-in-out shadow-sm hover:shadow-md xxlmax:flex-col"
+      class="
+        flex
+        transition-shadow
+        duration-150
+        ease-in-out
+        shadow-sm
+        hover:shadow-md
+        xxlmax:flex-col
+      "
     >
       <img
         v-if="author.img"

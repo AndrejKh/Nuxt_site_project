@@ -1,6 +1,6 @@
 <template>
   <main class="container mx-auto px-4 mt-28 md:mt-16 min-h-screen">
-    <blog class="prose">
+    <article class="prose">
       <h1>{{ blog.title }}</h1>
       <p>{{ blog.description }}</p>
       <p>Post last updated: {{ formatDate(blog.updatedAt) }}</p>
@@ -20,17 +20,17 @@
       <nuxt-content :document="blog" />
       <NextPrev :prev="prev" :next="next" class="mt-8" />
 
-<script src="https://giscus.app/client.js"
+      <script
+        src="https://giscus.app/client.js"
         data-repo="grahamsh-llk/site"
         data-repo-id="MDEwOlJlcG9zaXRvcnkzMzEwNzc5NDA="
         data-category-id="MDE4OkRpc2N1c3Npb25DYXRlZ29yeTMyOTc4Nzgw"
         data-mapping="title"
         data-theme="light"
         crossorigin="anonymous"
-        async>
-</script>
-
-    </blog>
+        async
+      ></script>
+    </article>
   </main>
 </template>
 <style class="postcss">
@@ -114,12 +114,11 @@ pre[class*="language-"].line-numbers > code {
   @apply pt-8;
 }
 .giscus-frame {
-    width: 100%;
+  width: 100%;
 }
 blog.prose {
   max-width: 80ch !important;
 }
-
 </style>
 <script>
 import Prism from "prismjs";
@@ -144,7 +143,7 @@ export default {
   },
   async asyncData({ $content, params }) {
     const blog = await $content("blog", params.slug).fetch();
-    const [prev, next] = await $content("blogs")
+    const [prev, next] = await $content("blog")
       .only(["title", "slug"])
       .sortBy("createdAt", "asc")
       .surround(params.slug)

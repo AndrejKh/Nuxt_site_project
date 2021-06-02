@@ -7,7 +7,14 @@
           <!-- hero text -->
           <div class="col-span-6">
             <h1
-              class="font-bold text-4xl md:text-5xl max-w-xl text-gray-900 leading-tight"
+              class="
+                font-bold
+                text-4xl
+                md:text-5xl
+                max-w-xl
+                text-gray-900
+                leading-tight
+              "
             >
               Hi, I'm @GrahamSH
             </h1>
@@ -31,12 +38,25 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="lg:text-center">
           <h2
-            class="text-base text-indigo-600 font-semibold tracking-wide uppercase"
+            class="
+              text-base text-indigo-600
+              font-semibold
+              tracking-wide
+              uppercase
+            "
           >
             My portfolio
           </h2>
           <p
-            class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl"
+            class="
+              mt-2
+              text-3xl
+              leading-8
+              font-extrabold
+              tracking-tight
+              text-gray-900
+              sm:text-4xl
+            "
           >
             GrahamSH
           </p>
@@ -47,13 +67,27 @@
 
         <div class="mt-10">
           <dl
-            class="space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:gap-x-8 md:gap-y-10"
+            class="
+              space-y-10
+              md:space-y-0
+              md:grid md:grid-cols-2
+              md:gap-x-8 md:gap-y-10
+            "
           >
             <div class="flex">
               <div class="flex-shrink-0">
                 <a href="https://scratchaddons.com">
                   <div
-                    class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      h-12
+                      w-12
+                      rounded-md
+                      bg-indigo-500
+                      text-white
+                    "
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
@@ -94,7 +128,16 @@
               <div class="flex-shrink-0">
                 <a href="https://bijou.js.org">
                   <div
-                    class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      h-12
+                      w-12
+                      rounded-md
+                      bg-indigo-500
+                      text-white
+                    "
                   >
                     <!-- Heroicon name: scale -->
 
@@ -136,7 +179,16 @@
             <div class="flex">
               <div class="flex-shrink-0">
                 <div
-                  class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                  class="
+                    flex
+                    items-center
+                    justify-center
+                    h-12
+                    w-12
+                    rounded-md
+                    bg-indigo-500
+                    text-white
+                  "
                 >
                   <!-- Heroicon name: lightning-bolt -->
                   <svg
@@ -170,7 +222,16 @@
               <div class="flex-shrink-0">
                 <a href="https://wasteof.money">
                   <div
-                    class="flex items-center justify-center h-12 w-12 rounded-md bg-indigo-500 text-white"
+                    class="
+                      flex
+                      items-center
+                      justify-center
+                      h-12
+                      w-12
+                      rounded-md
+                      bg-indigo-500
+                      text-white
+                    "
                   >
                     <!-- Heroicon name: annotation -->
                     <svg

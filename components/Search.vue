@@ -2,7 +2,16 @@
   <div>
     <div class="lg:block mx-auto text-gray-600 hidden">
       <input
-        class="border-2 border-gray-300 bg-white h-10 px-5 pr-16 rounded-lg text-sm focus:outline-none"
+        class="
+          border-2 border-gray-300
+          bg-white
+          h-10
+          px-5
+          pr-16
+          rounded-lg
+          text-sm
+          focus:outline-none
+        "
         autocomplete="off"
         type="search"
         name="search"
@@ -49,12 +58,34 @@
 
     <ul
       v-if="blogs.length"
-      class="z-10 absolute w-auto flex-1 top-20 bg-white dark:bg-gray-900 rounded-md border border-gray-300 overflow-hidden"
+      class="
+        z-10
+        absolute
+        w-auto
+        flex-1
+        top-20
+        bg-white
+        dark:bg-gray-900
+        rounded-md
+        border border-gray-300
+        overflow-hidden
+      "
     >
       <li v-for="blog of blogs" :key="blog.slug">
         <NuxtLink
           :to="{ name: 'blog-slug', params: { slug: blog.slug } }"
-          class="flex px-4 py-2 items-center leading-5 transition ease-in-out duration-150 text-indigo-500 hover:text-black"
+          class="
+            flex
+            px-4
+            py-2
+            items-center
+            leading-5
+            transition
+            ease-in-out
+            duration-150
+            text-indigo-500
+            hover:text-black
+          "
         >
           {{ blog.title }}
         </NuxtLink>

@@ -1,7 +1,16 @@
 <template>
   <div
     v-if="type === 'repository'"
-    class="p-4 space-y-1 bg-gray-100 rounded-md hover:bg-gray-200 dark:hover:bg-opacity-80 dark:bg-gray-800 dark:hover:bg-gray-800"
+    class="
+      p-4
+      space-y-1
+      bg-gray-100
+      rounded-md
+      hover:bg-gray-200
+      dark:hover:bg-opacity-80
+      dark:bg-gray-800
+      dark:hover:bg-gray-800
+    "
   >
     <div
       class="w-7/12 h-4 bg-gray-300 rounded-md dark:bg-gray-700 animate-pulse"

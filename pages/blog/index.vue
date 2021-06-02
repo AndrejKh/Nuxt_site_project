@@ -1,7 +1,15 @@
 <template>
   <main class="container mx-auto px-4 mt-28 md:mt-20 h-screen">
     <h1
-      class="text-4xl mb-6 tracking-tight font-extrabold text-gray-900 sm:text-5xl md:text-6xl"
+      class="
+        text-4xl
+        mb-6
+        tracking-tight
+        font-extrabold
+        text-gray-900
+        sm:text-5xl
+        md:text-6xl
+      "
     >
       Blog
     </h1>
@@ -34,7 +42,15 @@
                 ><img
                   :src="blog.author.image"
                   alt="avatar"
-                  class="mx-4 w-10 h-10 object-cover rounded-full hidden sm:block"
+                  class="
+                    mx-4
+                    w-10
+                    h-10
+                    object-cover
+                    rounded-full
+                    hidden
+                    sm:block
+                  "
                 />
                 <h1 class="text-gray-700 font-bold">
                   {{ blog.author.name }}
