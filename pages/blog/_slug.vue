@@ -143,7 +143,7 @@ export default {
     },
   },
   async asyncData({ $content, params }) {
-    const blog = await $content("blogs", params.slug).fetch();
+    const blogs = await $content("blog", params.slug).fetch();
     const [prev, next] = await $content("blogs")
       .only(["title", "slug"])
       .sortBy("createdAt", "asc")
