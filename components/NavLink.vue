@@ -12,7 +12,6 @@
         hover:text-gray-200 hover:text-underline
       "
       :to="to"
-      
       ><slot
     /></NuxtLink>
   </li>

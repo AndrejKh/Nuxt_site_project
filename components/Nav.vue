@@ -1,16 +1,6 @@
 <template>
   <nav
-    class="
-      bg-indigo-700
-      p-2
-      mt-0
-      fixed
-      w-full
-      z-10
-      top-0
-      drop-shadow-md
-      filter
-    "
+    class="bg-indigo-700 p-2 mt-0 fixed w-full z-10 top-0 drop-shadow-md filter"
   >
     <div class="container mx-auto flex flex-wrap items-center">
       <div

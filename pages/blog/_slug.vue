@@ -122,7 +122,6 @@ blog.prose {
 .nuxt-link-active {
   @apply text-white !important;
 }
-
 </style>
 <script>
 import Prism from "prismjs";
