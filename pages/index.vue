@@ -85,7 +85,7 @@
                       h-12
                       w-12
                       rounded-md
-                      bg-indigo-500
+                      bg-indigo-700
                       text-white
                     "
                   >
@@ -135,7 +135,7 @@
                       h-12
                       w-12
                       rounded-md
-                      bg-indigo-500
+                      bg-indigo-700
                       text-white
                     "
                   >
@@ -186,7 +186,7 @@
                     h-12
                     w-12
                     rounded-md
-                    bg-indigo-500
+                    bg-indigo-700
                     text-white
                   "
                 >
@@ -229,7 +229,7 @@
                       h-12
                       w-12
                       rounded-md
-                      bg-indigo-500
+                      bg-indigo-700
                       text-white
                     "
                   >

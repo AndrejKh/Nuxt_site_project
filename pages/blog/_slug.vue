@@ -119,6 +119,10 @@ pre[class*="language-"].line-numbers > code {
 blog.prose {
   max-width: 80ch !important;
 }
+.nuxt-link-active {
+  @apply text-white !important;
+}
+
 </style>
 <script>
 import Prism from "prismjs";
@@ -132,6 +136,19 @@ export default {
   head() {
     return {
       title: `${this.blog.title} - Blog - GrahamSH`,
+      meta: [
+        // hid is used as unique identifier. Do not use `vmid` for it as it will not work
+        {
+          hid: "description",
+          name: "description",
+          content: this.blog.description,
+        },
+        {
+          hid: "og:description",
+          name: "og:description",
+          content: this.blog.description,
+        },
+      ],
     };
   },
 

@@ -83,7 +83,7 @@
             transition
             ease-in-out
             duration-150
-            text-indigo-500
+            text-indigo-700
             hover:text-black
           "
         >

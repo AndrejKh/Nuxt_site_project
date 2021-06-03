@@ -8,6 +8,7 @@ title: Creating an Env Setup Script
 categories: nodejs test
 date: 2021-01-13T22:11:12.333Z
 img: "/logo.svg"
+description: "Creating an env setup script for wasteof.money."
 ---
 
 The other day, I decided to make a setup script for wasteof.money. If you don't know what wasteof.money is, check it out at dev.wasteof.money!
@@ -54,7 +55,7 @@ const fs = require("fs");
 })();
 ```
 
-At this point, the code was working, but it still didn't satisfy me. I wanted the user to be able to input a password and have that switched out with the <password> value from MongoDB Atlas.
+At this point, the code was working, but it still didn't satisfy me. I wanted the user to be able to input a password and have that switched out with the `<password>` value from MongoDB Atlas.
 
 I decided that it should also ask the user if they are using local, or Atlas. My final version looked like this.
 

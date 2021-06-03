@@ -4,6 +4,7 @@ author:
   bio: All about GrahamSH
   image: /logo.svg
 title: Weekly blog posts!
+description: "I'm committing to writing one blog post a week!"
 ---
 
 I'm committing to writing one blog post a week about something I'm passionate about, from a book I read to a new coding project. Watch this blog for a new post coming soon!

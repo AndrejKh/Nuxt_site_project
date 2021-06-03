@@ -40,6 +40,7 @@ export default {
   },
   tailwindcss: {
     config: {
+      mode: "jit",
       plugins: [tailwindTypography, lineClamp],
       theme: {
         screens: {

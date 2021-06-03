@@ -1,14 +1,13 @@
 <template>
   <nav
     class="
-      bg-white
+      bg-indigo-700
       p-2
       mt-0
       fixed
       w-full
       z-10
       top-0
-      border-t-4 border-indigo-800 border-solid
       drop-shadow-md
       filter
     "
@@ -35,7 +34,7 @@
           "
           to="/"
         >
-          <span class="text-gray-700 text-2xl"
+          <span class="text-2xl"
             ><img
               class="h-10 pr-2 inline-block"
               src="/logo.svg"
@@ -74,7 +73,7 @@
   </nav>
 </template>
 <style class="postcss">
-.active {
-  @apply text-gray-700 !important;
+.nuxt-link-exact-active {
+  @apply text-white !important;
 }
 </style>

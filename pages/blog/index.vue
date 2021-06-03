@@ -1,5 +1,5 @@
 <template>
-  <main class="container mx-auto px-4 mt-28 md:mt-20 h-screen">
+  <main class="container mx-auto px-4 mt-28 md:mt-20 min-h-screen">
     <h1
       class="
         text-4xl

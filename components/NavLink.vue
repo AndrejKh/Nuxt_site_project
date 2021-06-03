@@ -4,16 +4,15 @@
       v-bind="$attrs"
       class="
         inline-block
-        text-gray-500
+        text-gray-300
         font-normal
         py-2
         px-4
         no-underline
         hover:text-gray-200 hover:text-underline
       "
-      active-class="active"
       :to="to"
-      exact
+      
       ><slot
     /></NuxtLink>
   </li>

@@ -99,7 +99,7 @@
           <button
             class="
               shadow
-              bg-indigo-500
+              bg-indigo-700
               hover:bg-indigo-400
               focus:shadow-outline
               focus:outline-none
