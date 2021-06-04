@@ -1,5 +1,5 @@
 <template>
-  <main class="container mx-auto px-4 sm:mt-28 mt-28 md:mt-20 min-h-screen">
+  <main>
     <div class="hero py-16">
       <!-- container -->
       <div class="container px-4 sm:px-8 lg:px-16 xl:px-20 mx-auto">

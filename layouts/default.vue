@@ -1,7 +1,7 @@
 <template>
   <div>
     <Nav />
-    <Nuxt />
+    <Nuxt class="container mx-auto px-4 mt-28 md:mt-16 min-h-screen"/>
     <Footer />
   </div>
 </template>
