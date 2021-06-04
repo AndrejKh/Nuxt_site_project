@@ -7,6 +7,7 @@ title: My favorite npm packages
 categories: nodejs npm
 img: "/logo.svg"
 description: "Some of my favorite packages for Node."
+date: 2021-02-18T22:11:12.333Z
 ---
 
 As you probably know, npm is the package manager for Node.JS. Here are my 5 favorite npm packages.

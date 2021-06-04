@@ -1,6 +1,6 @@
 <template>
   <main class="container mx-auto px-4 mt-28 md:mt-16 min-h-screen">
-    <article class="prose">
+    <article class="prose-indigo prose">
       <h1>{{ blog.title }}</h1>
       <p>{{ blog.description }}</p>
       <p>Post last updated: {{ formatDate(blog.updatedAt) }}</p>
@@ -116,10 +116,7 @@ pre[class*="language-"].line-numbers > code {
 .giscus-frame {
   width: 100%;
 }
-blog.prose {
-  max-width: 80ch !important;
-}
-.nuxt-link-active {
+.blog-link {
   @apply text-white !important;
 }
 </style>

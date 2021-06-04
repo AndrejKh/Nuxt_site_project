@@ -1,4 +1,5 @@
 import "consola";
+import fetch from "node-fetch"
 if (process.env.NODE_ENV === "development") {
   consola.info(
     "Hello, and thanks for having interest in my site. However, I am not accepting contributions, as this is my personal site, and my project. If you want to contribute to something, find another open source project that needs your help. \n~ GrahamSH"
@@ -132,9 +133,8 @@ export default {
   
         // get all the posts we have
         const posts = await $content('blog').fetch();
-  
         // then, we'll loop over each post and grab the data fields we want to show in our feed. The name of your fields might be different than mine - that depends on how your data is set up in your Content settings.
-        posts.forEach((post) => {
+        posts.forEach(async (post) => {
           // the url of the post is set first
           const url = `https://grahamsh.com/blog/${post.slug}`;
           // then we do addItem, and give it all the details we want. You'll often see a date field here too - I don't have one because I don't post my dates on my posts.
@@ -143,6 +143,7 @@ export default {
             id: url,
             link: url,
             description: post.blurb,
+            date: new Date(post.date),
             // this is what we did in part two! Accessing that body text, that we converted into HTML
             content: post.bodyText,
           });

@@ -18,7 +18,7 @@
         <div class="max-w-4xl px-10 py-6 bg-white rounded-lg shadow-md">
           <div class="flex justify-between items-center">
             <span class="font-light text-gray-600">{{
-              formatDate(blog.updatedAt)
+              formatDate(blog.date)
             }}</span>
           </div>
           <div class="mt-2">
@@ -72,8 +72,8 @@ export default {
   },
   async asyncData({ $content, params }) {
     const blogs = await $content("blog", params.slug)
-      .only(["title", "description", "img", "slug", "author", "updatedAt"])
-      .sortBy("createdAt", "desc")
+      .only(["title", "description", "img", "slug", "author", "date"])
+      .sortBy("date", "desc")
       .fetch();
 
     return {
@@ -83,6 +83,7 @@ export default {
   methods: {
     formatDate(date) {
       const options = { year: "numeric", month: "long", day: "numeric" };
+      console.log(date)
       return new Date(date).toLocaleDateString("en", options);
     },
   },
