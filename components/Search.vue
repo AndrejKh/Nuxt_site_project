@@ -19,7 +19,7 @@
         placeholder="Search blog"
       />
 
-      <button type="submit" class="absolute right-10 mt-3 mr-4">
+      <button type="submit" class="absolute pin-r pin-t mt-3 mr-4">
         <svg
           v-show="searchQuery"
           class="text-gray-600 h-4 w-4 fill-current text-1xl"
