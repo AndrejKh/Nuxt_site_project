@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="lg:block mx-auto text-gray-600 hidden">
+    <div class="lg:block mx-auto text-gray-600 hidden relative">
       <input
         class="
           border-2 border-gray-300
@@ -19,7 +19,7 @@
         placeholder="Search blog"
       />
 
-      <button type="submit" class="absolute pin-r pin-t mt-3 mr-4">
+      <button type="submit" class="absolute right-0 top-0 mt-3 mr-2">
         <svg
           v-show="searchQuery"
           class="text-gray-600 h-4 w-4 fill-current text-1xl"
