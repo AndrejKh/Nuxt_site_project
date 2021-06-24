@@ -19,7 +19,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "@nuxtjs/storybook": "^4.0.4",
     "@nuxtjs/svg": "^0.1.12",
-    "@storybook/addon-docs": "^6.2.9",
+    "@storybook/addon-docs": "^6.3.0",
     "@tailwindcss/typography": "^0.4.1",
     "autoprefixer": "^10.2.6",
     "core-js": "^3.14.0",
