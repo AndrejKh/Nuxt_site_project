@@ -89,7 +89,7 @@ export default {
   },
 
   // Modules: https://go.nuxtjs.dev/config-modules
-  modules: ["@nuxt/content", "@nuxtjs/sitemap", "vue-plausible",    '@nuxtjs/feed', "@nuxtjs/markdownit"],
+  modules: ["@nuxt/content", "@nuxtjs/sitemap", "vue-plausible",    '@nuxtjs/feed', "@nuxtjs/markdownit",'@nuxtjs/critters',],
   plausible: {
     domain: "grahamsh.com",
     apiHost: "https://analytics.jeffalo.net",
