@@ -3,7 +3,7 @@ author:
   name: GrahamSH
   bio: All about GrahamSH
   image: /logo.svg
-title: E-Jenda
+title: Ejenda Four Months Later
 date: 2021-10-14T16:18:12.869Z
 img: "/logo.svg"
 description: "Ejenda Four Months Later"
