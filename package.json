@@ -12,7 +12,7 @@
     "export": "nuxt export"
   },
   "dependencies": {
-    "@nuxt/content": "^1.11.1",
+    "@nuxt/content": "^1.15.1",
     "@nuxtjs/critters": "^0.2.0",
     "@nuxtjs/feed": "^2.0.0",
     "@nuxtjs/markdownit": "^2.0.0",
