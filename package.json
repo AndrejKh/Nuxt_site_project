@@ -37,7 +37,7 @@
     "vue-unicons": "^3.2.1"
   },
   "devDependencies": {
-    "@nuxtjs/tailwindcss": "^4.2.1",
+    "@nuxtjs/tailwindcss": "^6.9.3",
     "nuxt-vite": "^0.3.5",
     "tailwindcss-line-clamp": "^1.0.5"
   }
